@@ -1,5 +1,5 @@
 const express= require('express');
-const sql = require('mysql12/promise');
+const sql = require('mysql2/promise');
 require('dontev').config();
 const port = 3000;
 
