@@ -33,7 +33,7 @@ app.get('/games', async (req, res) => {
     }
 });
 
-
+/*
 app.get('/games/:id', async (req, res) => {
     const { id } = req.params;
 
@@ -105,3 +105,4 @@ app.delete('/games/:id', async (req, res) => {
         res.status(500).json({ message: 'Server error deleting game' });
     }
 });
+*/
