@@ -26,12 +26,16 @@ app.get('/games', async (req, res) => {
     try {
         const connection = await mysql.createConnection(dbConfig);
         const [rows] = await connection.execute('SELECT * FROM games');
+
+        console.log('Games rows:', rows); // 👈 ADD THIS
+
         res.json(rows);
     } catch (err) {
         console.error(err);
         res.status(500).json({ message: 'Server error fetching games' });
     }
 });
+
 
 /*
 app.get('/games/:id', async (req, res) => {
